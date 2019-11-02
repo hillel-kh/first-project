@@ -1,5 +1,5 @@
 <template>
-  <ProjectLayout title="Twitter" color="lightblue">
+  <ProjectLayout title="Twitter" bgcolor="lightblue">
     <Twitter></Twitter>
   </ProjectLayout>
 </template>

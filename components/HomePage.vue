@@ -14,8 +14,8 @@ import CenteredLayout from './CenteredLayout.vue';
 export default {
   data: () => ({
     projects: [
-      { title: 'Hub', author: 'Stanislav', link: '/' },
-      { title: 'Twitter', author: 'Team', link: '/twitter' }
+      { title: 'Twitter', author: 'Team', link: '/twitter' },
+      { title: 'Counter', author: 'Stanislav', link: '/counter' }
     ]
   }),
   components: { CenteredLayout }

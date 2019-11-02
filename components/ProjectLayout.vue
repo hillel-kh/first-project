@@ -1,5 +1,5 @@
 <template>
-  <div class="page" :style="{ background: color || '#fff' }">
+  <div class="page" :style="{ background: bgcolor || '#fff', color: color || '#444' }">
     <main>
       <header>
         <h1>{{ title || 'Project without name' }}</h1>
@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  props: ['title', 'color']
+  props: ['title', 'bgcolor', 'color']
 }
 </script>
 
