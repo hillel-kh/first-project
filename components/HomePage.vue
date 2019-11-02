@@ -10,12 +10,13 @@
 
 <script>
 import CenteredLayout from './CenteredLayout.vue';
-
 export default {
   data: () => ({
     projects: [
       { title: 'Twitter', author: 'Team', link: '/twitter' },
-      { title: 'Counter', author: 'Stanislav', link: '/counter' }
+      { title: 'Counter', author: 'Stanislav', link: '/counter' },
+      { title: 'Slider', author: 'Diana', link: '/slider' }
+
     ]
   }),
   components: { CenteredLayout }
@@ -28,7 +29,6 @@ export default {
   text-align: center;
   width: 100%;
 }
-
 a {
   display: block;
   padding: 4px;
