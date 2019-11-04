@@ -19,3 +19,10 @@ body {
 a {
   color: #666;
 }
+
+@font-face {
+  font-family: Pomidorco;
+  src: url(../fonts/Pomidorko_cyr.ttf);
+}
+    
+    
