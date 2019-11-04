@@ -11,13 +11,15 @@ import HomePage from './HomePage.vue';
 import TwitterPage from './TwitterPage.vue';
 import CounterPage from './CounterPage.vue';
 import NotFoundPage from './NotFoundPage.vue';
+import SortedTablePage from "./SortedTablePage";
 
 export default {
   data: () => ({
     routes: {
       '/': HomePage,
       '/twitter': TwitterPage,
-      '/counter': CounterPage
+      '/counter': CounterPage,
+      '/sortedTable': SortedTablePage
     }
   }),
 
