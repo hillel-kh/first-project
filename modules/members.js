@@ -1,6 +1,6 @@
-const T1 = 'Team X';
-const T2 = 'Team Y';
-const T3 = 'Team Z';
+const T1 = 'Team X: ContentEditor';
+const T2 = 'Team Y: Chat';
+const T3 = 'Team Z: Constructor';
 const T4 = 'Team W';
 
 const members = [
