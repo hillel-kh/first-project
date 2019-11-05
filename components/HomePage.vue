@@ -17,9 +17,9 @@ export default {
       { title: 'Twitter', author: 'Team', link: '/twitter' },
       { title: 'Counter', author: 'Stanislav', link: '/counter' },
       { title: 'Gallery', author: 'IhorKos', link: '/gallery' },
-      { title: 'Products', author: 'IhorKos', link: '/ProductsList' },
+      { title: 'Products', author: 'IhorKos', link: '/ProductItem' },
     ]
-  
+    
   }),
   components: { CenteredLayout }
 }

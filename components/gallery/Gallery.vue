@@ -2,8 +2,8 @@
     <div>
         <button v-on:click="prevImg">prev</button>
         <button v-on:click="nextImg">next</button> 
-        <img :src="images[i]">
-        
+        <img :src="images[i]" width="200" height="100">
+
     </div>
 </template>
 

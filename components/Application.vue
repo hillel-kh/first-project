@@ -22,7 +22,7 @@ export default {
       '/twitter': TwitterPage,
       '/counter': CounterPage,
       '/gallery': GalleryPage,
-      '/products': ProductPage,
+      '/ProductItem': ProductPage,
 
     }
   }),
