@@ -11,16 +11,18 @@ import HomePage from './HomePage.vue';
 import TwitterPage from './TwitterPage.vue';
 import CounterPage from './CounterPage.vue';
 import NotFoundPage from './NotFoundPage.vue';
+import GalleryPage from './GalleryPage.vue';
 
 export default {
   data: () => ({
     routes: {
       '/': HomePage,
       '/twitter': TwitterPage,
-      '/counter': CounterPage
+      '/counter': CounterPage,
+      '/gallery': GalleryPage,
     }
   }),
 
   components: { Router, NotFoundPage }
 }
-</script>
+</script> 
