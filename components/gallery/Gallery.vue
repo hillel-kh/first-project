@@ -3,6 +3,7 @@
         <button v-on:click="prevImg">prev</button>
         <button v-on:click="nextImg">next</button> 
         <img :src="images[i]">
+        
     </div>
 </template>
 

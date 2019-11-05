@@ -12,6 +12,8 @@ import TwitterPage from './TwitterPage.vue';
 import CounterPage from './CounterPage.vue';
 import NotFoundPage from './NotFoundPage.vue';
 import GalleryPage from './GalleryPage.vue';
+import ProductPage from './ProductPage.vue';
+
 
 export default {
   data: () => ({
@@ -20,6 +22,8 @@ export default {
       '/twitter': TwitterPage,
       '/counter': CounterPage,
       '/gallery': GalleryPage,
+      '/products': ProductPage,
+
     }
   }),
 

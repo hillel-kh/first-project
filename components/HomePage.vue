@@ -3,7 +3,7 @@
     <div class="container">
       <h1>Welcome!</h1>
       <h2>See our projects:</h2>
-      <a v-for="p in projects" :href="p.link">{{p.title}} &copy; {{p.author}}</a>
+      <a v-for="p in projects" :href="p.link"> {{p.title}} &copy; {{p.author}}</a>
     </div>
   </CenteredLayout>
 </template>
@@ -16,8 +16,10 @@ export default {
     projects: [
       { title: 'Twitter', author: 'Team', link: '/twitter' },
       { title: 'Counter', author: 'Stanislav', link: '/counter' },
-      { title: 'Gallery', author: 'IhorKos', link: '/gallery' }
+      { title: 'Gallery', author: 'IhorKos', link: '/gallery' },
+      { title: 'Products', author: 'IhorKos', link: '/ProductsList' },
     ]
+  
   }),
   components: { CenteredLayout }
 }
