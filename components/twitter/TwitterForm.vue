@@ -1,49 +1,51 @@
 <template>
-  <form @submit.prevent="submit">
-    <input class="message-input" type="text" v-model="message" placeholder="Ready to tweet?" />
-    <span class="tip">Press [Enter] to submit the message</span>
-  </form>
+	<form @submit.prevent="submit">
+		<input v-model="message"
+		       class="message-input"
+		       type="text"
+		       placeholder="Ready to tweet?"/>
+		<span class="tip">Press [Enter] to submit the message</span>
+	</form>
 </template>
 
 <script>
-import Twiter from './Twitter.vue'
-export default {
-  data: () => ({ message: '' }),
+	export default {
+		data: () => ({message: ''}),
 
-  computed: {
-    isValidMessage() {
-      return this.message.trim().length;
-    }
-  },
+		computed: {
+			isValidMessage() {
+				return this.message.trim().length;
+			}
+		},
 
-  methods: {
-    submit(event) {
-      const newTweet = { msg: this.message, date: new Date() };
-      this.$emit('createTweet', newTweet)
-      this.message = '';
-    }
-  }
-}
+		methods: {
+			submit(event) {
+				const newTweet = {msg: this.message, date: new Date()};
+				this.$emit('createTweet', newTweet)
+				this.message = '';
+			}
+		}
+	}
 </script>
 
-<style scoped>
-.message-input {
-  border-radius: 4px;
-  border: 0;
-  box-shadow: 1px 1px 3px #ddd;
-  box-sizing: border-box;
-  font-size: 14px;
-  padding: 7px 14px;
-  width: 100%;
-}
+<style lang="scss" scoped>
+	.message-input {
+		border: 0;
+		width: 100%;
+		font-size: 14px;
+		padding: 7px 14px;
+		border-radius: 4px;
+		box-sizing: border-box;
+		box-shadow: 1px 1px 3px #ddd;
+	}
 
-.tip {
-  color: #666;
-  font-size: 12px;
-  display: block;
-  text-align: right;
-  padding-top: 4px;
-}
+	.tip {
+		color: #666;
+		font-size: 12px;
+		display: block;
+		text-align: right;
+		padding-top: 4px;
+	}
 
 </style>
 
