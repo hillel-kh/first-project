@@ -13,7 +13,6 @@
   "license": "MIT",
   "dependencies": {
     "parcel": "^1.12.4",
-    "sass": "^1.23.0",
     "vue": "^2.6.10",
     "vue-hot-reload-api": "^2.3.4"
   },
