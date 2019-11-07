@@ -37,10 +37,10 @@
 </script>
 
 <style lang="scss" scoped>
+	@import "../../../scss/settings";
+
 	.messages {
-		margin: 0;
-		padding: 0;
-		list-style: none;
-		margin: 30px 0 0 0;
+		@extend %listreset;
+		margin-top: 30px;
 	}
 </style>

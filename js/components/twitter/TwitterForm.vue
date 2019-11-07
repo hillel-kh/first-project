@@ -4,7 +4,7 @@
 		       class="message-input"
 		       type="text"
 		       placeholder="Ready to tweet?"/>
-		<span class="tip">Press [Enter] to submit the message</span>
+		<div class="tip">Press [Enter] to submit the message</div>
 	</form>
 </template>
 
@@ -29,20 +29,16 @@
 </script>
 
 <style lang="scss" scoped>
+	@import "../../../scss/settings";
+
 	.message-input {
 		border: 0;
 		width: 100%;
-		font-size: 14px;
-		padding: 7px 14px;
-		border-radius: 4px;
-		box-sizing: border-box;
-		box-shadow: 1px 1px 3px #ddd;
 	}
 
 	.tip {
-		color: #666;
+		color: $gray-700;
 		font-size: 12px;
-		display: block;
 		text-align: right;
 		padding-top: 4px;
 	}

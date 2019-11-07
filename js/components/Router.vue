@@ -34,8 +34,9 @@
 </script>
 
 <style lang="scss" scoped>
+	@import "../../scss/settings";
+
 	.router {
-		width: 100%;
-		height: 100%;
+		@include size(100%);
 	}
 </style>

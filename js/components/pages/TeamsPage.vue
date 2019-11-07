@@ -18,8 +18,8 @@
 </template>
 
 <script>
-	import CenteredLayout from './CenteredLayout.vue';
-	import members from '../modules/members';
+	import CenteredLayout from '../layouts/CenteredLayout.vue';
+	import members from '../../modules/members';
 
 	export default {
 		data: () => ({

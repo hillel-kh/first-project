@@ -3,19 +3,21 @@
 		<div class="container">
 			<h1>Welcome!</h1>
 			<h2>See our projects:</h2>
-			<a v-for="p in projects" :href="p.link">{{p.title}} &copy; {{p.author}}</a>
+			<a v-for="p in projects"
+			   :href="p.link">{{p.title}} &copy; {{p.author}}</a>
 		</div>
 	</CenteredLayout>
 </template>
 
 <script>
-	import CenteredLayout from './CenteredLayout.vue';
+	import CenteredLayout from '../layouts/CenteredLayout.vue';
 
 	export default {
 		data: () => ({
 			projects: [
 				{title: 'Twitter', author: 'Team', link: '/twitter'},
-				{title: 'Counter', author: 'Stanislav', link: '/counter'}
+				{title: 'Counter', author: 'Stanislav', link: '/counter'},
+				{title: 'Constructor', author: 'T3', link: '/constructor'}
 			]
 		}),
 		components: {CenteredLayout}

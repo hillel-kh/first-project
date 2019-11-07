@@ -1,5 +1,6 @@
 <template>
-	<div class="page" :style="{ background: bgcolor || '#fff', color: color || '#444' }">
+	<div class="page"
+	     :style="{ background: bgcolor || '#fff', color: color || '#444' }">
 		<main>
 			<header>
 				<h1>{{ title || 'Project without name' }}</h1>

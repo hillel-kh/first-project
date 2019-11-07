@@ -11,13 +11,15 @@
 	}
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+	@import "../../../scss/settings";
+
 	.message {
-		margin-top: 14px;
 		padding: 14px;
+		margin-top: 14px;
+		background: $white;
 		box-shadow: 1px 1px 3px #ddd;
 		border-radius: 5px;
-		background: #fff;
 	}
 
 	.date {

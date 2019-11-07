@@ -5,8 +5,8 @@
 </template>
 
 <script>
-	import ProjectLayout from './ProjectLayout.vue';
-	import Twitter from './twitter/Twitter.vue';
+	import ProjectLayout from '../layouts/ProjectLayout.vue';
+	import Twitter from '../twitter/Twitter.vue';
 
 	export default {
 		components: {ProjectLayout, Twitter}

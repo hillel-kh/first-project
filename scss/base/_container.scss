@@ -1,0 +1,12 @@
+.container {
+	margin: {
+		left: auto;
+		right: auto;
+	}
+	padding: {
+		left: ($grid-gutter-width / 2);
+		right: ($grid-gutter-width / 2);
+	}
+	width: 100%;
+	max-width: $container-max-width;
+}
