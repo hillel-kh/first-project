@@ -1,5 +1,5 @@
 <template>
-	<ProjectLayout title="Constructor" bgcolor="lightblue">
+	<ProjectLayout title="Constructor">
 		<ConstructorExamples></ConstructorExamples>
 	</ProjectLayout>
 </template>
