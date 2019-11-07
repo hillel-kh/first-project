@@ -15,7 +15,8 @@
 		data: () => ({
 			projects: [
 				{title: 'Twitter', author: 'Team', link: '/twitter'},
-				{title: 'Counter', author: 'Stanislav', link: '/counter'}
+				{title: 'Counter', author: 'Stanislav', link: '/counter'},
+				{title: 'Carusel', author: 'D', link: '/carusel'}
 			]
 		}),
 		components: {CenteredLayout}

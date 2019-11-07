@@ -1,11 +1,13 @@
 <template>
 	<div class="page" :style="{ background: bgcolor || '#fff', color: color || '#444' }">
 		<main>
-			<header>
-				<h1>{{ title || 'Project without name' }}</h1>
-				<a href="/">Return back</a>
-			</header>
-			<slot></slot>
+			<div class="container">
+				<header>
+					<h1>{{ title || 'Project without name' }}</h1>
+					<a href="/">Return back</a>
+				</header>
+				<slot></slot>
+			</div>
 		</main>
 	</div>
 </template>
@@ -21,11 +23,6 @@
 		height: 100%;
 		width: 100%;
 		overflow: auto;
-	}
-
-	main {
-		margin: 60px auto;
-		width: 400px;
 	}
 
 	header {

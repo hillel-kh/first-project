@@ -12,6 +12,7 @@
 	import CounterPage from './CounterPage.vue';
 	import TeamsPage from './TeamsPage.vue';
 	import NotFoundPage from './NotFoundPage.vue';
+	import CaruselPage from './carousel/Carousel';
 
 	export default {
 		data: () => ({
@@ -19,7 +20,8 @@
 				'/': HomePage,
 				'/twitter': TwitterPage,
 				'/counter': CounterPage,
-				'/teams': TeamsPage
+				'/teams': TeamsPage,
+				'/carusel': CaruselPage
 			}
 		}),
 
