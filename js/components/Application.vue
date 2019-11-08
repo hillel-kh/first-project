@@ -12,6 +12,7 @@
 	import CounterPage from './pages/CounterPage.vue';
 	import TeamsPage from './pages/TeamsPage.vue';
 	import NotFoundPage from './pages/NotFoundPage.vue';
+  import GalleryPage from './pages/GalleryPage.vue';
 	import Constructor from './pages/ConstructorPage.vue';
 
 	export default {
@@ -21,10 +22,11 @@
 				'/twitter': TwitterPage,
 				'/counter': CounterPage,
 				'/teams': TeamsPage,
+				'/gallery': GalleryPage,
 				'/constructor': Constructor
 			}
 		}),
 
-		components: {Router, NotFoundPage}
+		components: { Router, NotFoundPage }
 	}
 </script>

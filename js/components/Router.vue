@@ -1,17 +1,21 @@
 <template>
 	<div @click="click" class="router">
-		<component v-if="page" :is="page"></component>
+		<component v-if="page" :is="page" v-bind="props"></component>
 		<slot v-else></slot>
 	</div>
 </template>
 
 <script>
 	import matchEventToTag from '../modules/match-event-to-tag';
+	import extractLinkProps from '../modules/extract-link-props';
 
 	export default {
 		props: ['routes'],
 
-		data: () => ({pathname: location.pathname}),
+		data: () => ({
+			pathname: location.pathname,
+			props: extractLinkProps(location.search)
+		}),
 
 		methods: {
 			click(event) {
@@ -22,6 +26,7 @@
 				event.preventDefault();
 				history.pushState(null, null, link.href.slice(link.origin.length));
 				this.pathname = link.pathname;
+				this.props = extractLinkProps(link.search)
 			}
 		},
 
