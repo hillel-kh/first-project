@@ -5,7 +5,7 @@
 		    class="templates-list">
 			<li v-for="template in templates">
 				<div class="example">
-					<a href="">preview</a>
+					<a href="/constructor/preview">preview</a>
 				</div>
 			</li>
 		</ul>
