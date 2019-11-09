@@ -16,7 +16,7 @@ export default {
     projects: [
       { title: 'Twitter', author: 'Team', link: '/twitter' },
       { title: 'Counter', author: 'Stanislav', link: '/counter' },
-      { title: 'Chat', authot: 'Polyna, Igor, Kateryna', link: '/chat'}
+      { title: 'Chat', author: 'Polyna, Igor, Kateryna', link: '/chat'}
     ]
   }),
   components: { CenteredLayout }

@@ -12,7 +12,7 @@ import TwitterPage from './TwitterPage.vue';
 import CounterPage from './CounterPage.vue';
 import TeamsPage from './TeamsPage.vue';
 import NotFoundPage from './NotFoundPage.vue';
-import ChatApp from './ChatApp.vue';
+import ChatPage from './ChatPage.vue';
 
 export default {
   data: () => ({
@@ -21,7 +21,7 @@ export default {
       '/twitter': TwitterPage,
       '/counter': CounterPage,
       '/teams': TeamsPage,
-      '/chat': ChatApp
+      '/chat': ChatPage
     }
   }),
 
