@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper">
+    <div class="wrapper" >
       <h2 class="title">Текстовый редактор с автосохранением</h2>
       <div class="buttons">
         <button @click="createTable()">TABLE</button>
@@ -7,7 +7,14 @@
         <button @click="makeItalic()"><i>ITALIC</i></button>
         <button @click="createImg()">IMAGE</button>
       </div>
-      <p class="editor" contenteditable="true" v-model="text" :class="{italic: isItalic, bold: isBold}"></p>
+      <p 
+        class="editor" 
+        contenteditable="true" 
+        v-model="text" 
+        :class="{italic: isItalic, bold: isBold}"
+        @keydown.ctrl.b="makeBold()"
+        @keydown.ctrl.i="makeItalic()">
+      </p>
     </div>
 </template>
 
