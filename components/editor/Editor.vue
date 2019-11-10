@@ -2,20 +2,34 @@
     <div class="wrapper">
       <h2 class="title">Текстовый редактор с автосохранением</h2>
       <div class="buttons">
-        <button>TABLE</button>
-        <button><b>BOLD</b></button>
-        <button ><i>ITALICS</i></button>
-        <button>IMAGE</button>
+        <button @click="createTable()">TABLE</button>
+        <button @click="makeBold()"><b>BOLD</b></button>
+        <button @click="makeItalic()"><i>ITALIC</i></button>
+        <button @click="createImg()">IMAGE</button>
       </div>
-      <div class="editor" contenteditable="true"></div>
+      <p class="editor" contenteditable="true" v-model="text"></p>
     </div>
 </template>
 
+<script>
+export default {
+  data: () => ({
+    text: ''
+  }),
+  methods: {
+    makeItalic() {
+      document.querySelector('.editor').classList.add('italic')
+    },
+    makeBold() {
+      document.querySelector('.editor').classList.add('bold')
+    }
+  }
+} 
+</script>
+
 <style scoped>
-body{ 
-  font-family: "Dosis"; 
-  font-size: 1.3em;
-  line-height: 1.6em;
+* {
+  box-sizing: border-box;
 }
 .buttons {
   display: flex;
@@ -26,12 +40,10 @@ body{
   padding: 1em;
   background: #E6E6E6;
   border-radius: 3px;
-  height: 50%; 
-  text-align: center;
-  margin: 10;
+  height: 50%;
   font-family: Verdana, Arial, sans-serif;
   font-size: 24px;
-  border: 1px solid;
+  border: 1px solid black;
 }
 .title {
   color:navy;
@@ -55,6 +67,12 @@ button{
   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
   border-radius: 3px;
 }
+.bold {
+  font-weight: bold;
+}
+.italic {
+  font-style: italic;
+} 
 button:hover, button:focus {
   cursor: pointer;
   outline: none;

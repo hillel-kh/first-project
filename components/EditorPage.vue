@@ -1,5 +1,5 @@
 <template>
-  <ProjectLayout title="Editor" bgcolor="#ced1d6" color="#fff">
+  <ProjectLayout title="Editor" bgcolor="#ced1d6" color="black">
     <Editor></Editor>
   </ProjectLayout>
 </template>
