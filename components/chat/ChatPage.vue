@@ -7,8 +7,6 @@
 
 
 <script>
-import '/styles/reset.sass';
-import '/styles/chat-style.sass';
 import ChatLogin from './ChatLogin.vue';
 
 export default {
