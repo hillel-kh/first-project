@@ -1,22 +1,30 @@
 <template>
   <header class="header">
     <div class="logo">
-      <a href="#"><img src="/img/chat-img/main-logo.png" width="60" height="60" alt="chat logo" /></a>
+      <a href="#">
+        <img src="/img/chat-img/main-logo.png" width="60" height="60" alt="chat logo" />
+      </a>
       <h2>Our imperfect Chat</h2>
     </div>
-    <div class="log-out">
+    <div class="log">
       <div class="user">
         <img src="/img/chat-img/avatar-unknown.png" width="50" height="50" alt="avatar" />
-        <p class="username">Antonio</p>
+        <p class="log-in">User name</p>
       </div>
       <div class="exit">
-        <button><img src="/img/chat-img/exit-icon.png" width="45" height="45" alt="exit" /></button>
+        <button>
+          <img src="/img/chat-img/exit-icon.png" width="45" height="45" alt="exit" />
+        </button>
       </div>
     </div>
   </header>
 </template>
 
+
+
 <style lang="sass" scoped>
+@import '/styles/reset.sass'
+@import '/styles/chat-style.sass'
 .header
   display: flex
   justify-content: space-between
@@ -27,10 +35,6 @@
   .logo
     display: flex
     justify-content: space-between
-    a
-      text-decoration: none
-      color: #fff
-      font-weight: bold
     h2
       margin-left: 20px
       font-size: 1.5em
@@ -38,21 +42,20 @@
       display: flex
       justify-content: center
       align-items: center
-  .log-out
+  .log
+    display: flex
+    justify-content: space-between
     .user
       display: flex
       justify-content: space-between
       border: solid 1px #414040
       padding: 10px
-      img
+      .log-in
         margin-right: 20px
-      .username
-        margin-right: 20px
+        margin-left: 20px
         display: flex
         justify-content: center
         align-items: center
-    display: flex
-    justify-content: space-between
     .exit
       padding-top: 2px
       border: solid 1px #414040
@@ -60,6 +63,4 @@
       button
         background: transparent
         border: none
-        cursor: pointer
-        outline: none
 </style>

@@ -121,23 +121,6 @@ ul {
     left: 20%;
 
 }
-.chats {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.chats-rooms {
-    min-width: 300px;
-    margin: 0 auto;
-
-}
-.chat-room {
-    display: flex;
-    justify-content: center;
-    min-width: 200px;
-    border: solid 1px #414040;
-}
 
 .visually-hidden {
     position: absolute;

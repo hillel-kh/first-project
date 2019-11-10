@@ -12,11 +12,17 @@
   </footer>
 </template>
 
+
+
 <style lang="sass" scoped>
+@import '/styles/reset.sass'
+@import '/styles/chat-style.sass'
 footer
   display: flex
   align-items: flex-end
   flex-direction: column
   .developer-span
     margin-bottom: 30px
+  a
+    color: #666
 </style>

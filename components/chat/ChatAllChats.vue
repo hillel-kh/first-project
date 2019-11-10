@@ -1,7 +1,7 @@
 <template>
   <div>
     <ChatHeader></ChatHeader>
-    <ChatLoginComponent></ChatLoginComponent>
+    <ChatAllChatsComponent></ChatAllChatsComponent>
     <ChatFooter></ChatFooter>
   </div>
 </template>
@@ -10,10 +10,10 @@
 
 <script>
 import ChatHeader from './ChatHeader.vue';
-import ChatLoginComponent from './ChatLoginComponent.vue';
+import ChatAllChatsComponent from './ChatAllChatsComponent.vue';
 import ChatFooter from './ChatFooter.vue';
 export default {
-  components: {ChatHeader, ChatLoginComponent, ChatFooter}
+  components: {ChatHeader, ChatAllChatsComponent, ChatFooter}
 }
 </script>
 
