@@ -1,13 +1,13 @@
 <template>
   <section>
-    <h2 class="auth-heading">Communication for training and not only :)</h2>
+    <h2>Communication for training and not only :)</h2>
     <form>
       <label>
         Enter your username :
         <input type="text" class="input-username" name="username" />
       </label>
       <label>
-        <input type="checkbox" class="remember-user" checked />remember me on this device
+        <input type="checkbox" class="checkbox" checked />remember me on this device
       </label>
       <button type="submit"><a href="/chat/all_chats">let's talk!</a></button>
     </form>
@@ -37,6 +37,8 @@ section
       border: none
       border-radius: 5px
       color: #f8f8f8
+    .checkbox
+      margin-right: 10px
     button
       padding: 5px 10px
       border: none
