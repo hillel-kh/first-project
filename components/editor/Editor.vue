@@ -7,21 +7,23 @@
         <button @click="makeItalic()"><i>ITALIC</i></button>
         <button @click="createImg()">IMAGE</button>
       </div>
-      <p class="editor" contenteditable="true" v-model="text"></p>
+      <p class="editor" contenteditable="true" v-model="text" :class="{italic: isItalic, bold: isBold}"></p>
     </div>
 </template>
 
 <script>
 export default {
   data: () => ({
-    text: ''
+    text: '',
+    isItalic: false,
+    isBold: false
   }),
   methods: {
     makeItalic() {
-      document.querySelector('.editor').classList.add('italic')
+      this.isItalic ? this.isItalic = false : this.isItalic = true
     },
     makeBold() {
-      document.querySelector('.editor').classList.add('bold')
+      this.isBold ? this.isBold = false : this.isBold = true
     }
   }
 } 
