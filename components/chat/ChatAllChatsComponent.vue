@@ -18,32 +18,32 @@ export default {
     chats: [
       {
         picture: require("/img/chat-img/melania.png"),
-        href: "#",
+        href: "/chat/chat",
         name: "Melania"
       },
       {
         picture: require("/img/chat-img/melania.png"),
-        href: "#",
+        href: "/chat/chat",
         name: "Kateryna"
       },
       {
         picture: require("/img/chat-img/avatar-unknown.png"),
-        href: "#",
+        href: "/chat/chat",
         name: "Antonio"
       },
       {
         picture: require("/img/chat-img/avatar-unknown.png"),
-        href: "#",
+        href: "/chat/chat",
         name: "Unknown Artist"
       },
       {
         picture: require("/img/chat-img/melania.png"),
-        href: "#",
+        href: "/chat/chat",
         name: "Polina"
       },
       {
         picture: require("/img/chat-img/avatar-unknown.png"),
-        href: "#",
+        href: "/chat/chat",
         name: "Stanislav"
       }
     ]

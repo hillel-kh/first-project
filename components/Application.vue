@@ -14,6 +14,7 @@ import TeamsPage from './TeamsPage.vue';
 import NotFoundPage from './NotFoundPage.vue';
 import ChatPage from './chat/ChatPage.vue';
 import ChatAllChatsPage from './chat/ChatAllChatsPage.vue';
+import ChatChatPage from './chat/ChatChatPage.vue';
 
 export default {
   data: () => ({
@@ -23,7 +24,8 @@ export default {
       '/counter': CounterPage,
       '/teams': TeamsPage,
       '/chat': ChatPage,
-      '/chat/all_chats': ChatAllChatsPage
+      '/chat/all_chats': ChatAllChatsPage,
+      '/chat/chat': ChatChatPage
     }
   }),
 

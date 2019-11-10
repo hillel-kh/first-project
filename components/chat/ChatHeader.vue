@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="logo">
-      <a href="#">
+      <a href="/chat/all_chats">
         <img src="/img/chat-img/main-logo.png" width="60" height="60" alt="chat logo" />
       </a>
       <h2>Our imperfect Chat</h2>
@@ -11,11 +11,9 @@
         <img src="/img/chat-img/avatar-unknown.png" width="50" height="50" alt="avatar" />
         <p class="log-in">User name</p>
       </div>
-      <div class="exit">
-        <button>
-          <img src="/img/chat-img/exit-icon.png" width="45" height="45" alt="exit" />
-        </button>
-      </div>
+      <a class="exit" href="/chat">
+        <img src="/img/chat-img/exit-icon.png" width="45" height="45" alt="exit" />
+      </a>
     </div>
   </header>
 </template>
@@ -57,10 +55,8 @@
         justify-content: center
         align-items: center
     .exit
+      display: block
       padding-top: 2px
       border: solid 1px #414040
-      padding: 10px
-      button
-        background: transparent
-        border: none
+      padding: 10px 20px
 </style>

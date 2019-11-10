@@ -31,6 +31,7 @@ section
     border: solid 2px #414040
     border-radius: 10px
     margin: 0 auto
+    margin-bottom: 40px
     .input-username
       background-color: #3f3f3f
       border: none
