@@ -18,15 +18,16 @@
 </script>
 
 <style lang="scss" scoped>
+	@import "../../../scss/settings";
+
 	.page {
-		height: 100%;
-		width: 100%;
+		@include size(100%);
 		overflow: auto;
 	}
 
 	main {
-		margin: 60px auto;
 		width: 400px;
+		margin: 60px auto;
 	}
 
 	header {

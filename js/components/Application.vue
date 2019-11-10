@@ -12,7 +12,7 @@
 	import CounterPage from './pages/CounterPage.vue';
 	import TeamsPage from './pages/TeamsPage.vue';
 	import NotFoundPage from './pages/NotFoundPage.vue';
-  	import GalleryPage from './pages/GalleryPage.vue';
+	import GalleryPage from './pages/GalleryPage.vue';
 	import Constructor from './pages/ConstructorPage.vue';
 	import ConstructorPreview from './pages/ConstructorPreviewPage.vue';
 

@@ -5,9 +5,10 @@
 </template>
 
 <style lang="scss" scoped>
+	@import "../../../scss/settings";
+
 	.layout {
-		width: 100%;
-		height: 100%;
+		@include size(100%);
 		display: flex;
 		align-items: center;
 		justify-content: center;

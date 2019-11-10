@@ -3,17 +3,13 @@
 		<header>
 			<h2>ConstructorPreview</h2>
 			<nav>
-				<button>
-					<a href="/constructor">back to ConstructorExamples</a>
-				</button>
-				<button>Edit</button>
+				<a href="/constructor">back to ConstructorExamples</a>
+				<button type="button">Edit</button>
 			</nav>
 		</header>
 		<main>
-			<div
-				class="constructor-view"
-				ref="constructorView"
-			></div>
+			<div ref="constructorView"
+			     class="constructor-view"></div>
 		</main>
 	</div>
 </template>
@@ -23,19 +19,10 @@
 		data() {
 			return {
 				test: {
-					html :`<div style="
-								width: 300px;
-								height: 200px;
-								background: #17a2b8;
-							"></div>
-							<div style="
-								width: 250px;
-								height: 200px;
-								background: #dc3545;
-								position: relative;
-								top: -50px;
-								left: 30px;
-							"></div>`
+					html :`
+						<div style="width: 300px;height: 200px;background: #17a2b8;"></div>
+						<div style="width: 250px;height: 200px;background: #dc3545;position: relative;top: -50px;left: 30px;"></div>
+						`
 				}
 			}
 		},
@@ -45,9 +32,11 @@
 	}
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+	@import "../../../scss/settings";
+
 	.constructor-view {
 		padding: 10px;
-		border: 1px solid #000;
+		border: 1px solid $black;
 	}
 </style>

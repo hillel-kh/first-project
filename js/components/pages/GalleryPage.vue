@@ -23,4 +23,5 @@
 </script>
 
 <style lang="scss" scoped>
+	@import "../../../scss/settings";
 </style>
