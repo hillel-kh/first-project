@@ -1,5 +1,4 @@
 <template>
-  <CenteredLayout>
     <div class="wrapper">
       <h2 class="title">Текстовый редактор с автосохранением</h2>
       <div class="buttons">
@@ -10,7 +9,6 @@
       </div>
       <div class="editor" contenteditable="true"></div>
     </div>
-  </CenteredLayout>
 </template>
 
 <style scoped>
@@ -38,7 +36,7 @@ body{
 .title {
   color:navy;
   text-align: center;
-  font-size: 35px;
+  font-size: 1.5em;
   margin-top: 5px;
 }
 button{
