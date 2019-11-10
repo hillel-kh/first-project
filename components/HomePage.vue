@@ -15,7 +15,8 @@ export default {
   data: () => ({
     projects: [
       { title: 'Twitter', author: 'Team', link: '/twitter' },
-      { title: 'Counter', author: 'Stanislav', link: '/counter' }
+      { title: 'Counter', author: 'Stanislav', link: '/counter' },
+      { title: 'Chat', author: 'Polyna, Igor, Kateryna', link: '/chat'}
     ]
   }),
   components: { CenteredLayout }
