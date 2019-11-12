@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <ChatHeader></ChatHeader>
+  <div class="log">
+    <!--<ChatHeader></ChatHeader>-->
     <ChatLoginComponent></ChatLoginComponent>
     <ChatFooter></ChatFooter>
   </div>
@@ -22,4 +22,6 @@ export default {
 <style lang="sass" scoped>
 @import '/styles/reset.sass'
 @import '/styles/chat-style.sass'
+.log
+  padding-top: 250px
 </style>
