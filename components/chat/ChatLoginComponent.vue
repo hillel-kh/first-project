@@ -1,20 +1,31 @@
 <template>
   <section>
     <h2>Communication for training and not only :)</h2>
-    <form>
+    <form @submit="submit">
       <label>
         Enter your username :
-        <input type="text" class="input-username" name="username" />
+        <input type="text" class="input-username" name="username" required pattern="[A-Za-z0-9]{3,15}"/>
       </label>
       <label>
         <input type="checkbox" class="checkbox" checked />remember me on this device
       </label>
-      <button type="submit"><a href="/chat/all_chats">let's talk!</a></button>
+      <input type="submit" value="let's talk!" class="btn"> 
     </form>
   </section>
 </template>
 
+<script>
+export default {
+  data: () => ({}),
 
+  methods: {
+    submit(event) {
+      event.preventDefault();
+      document.location.href = '/chat/all_chats';
+    },
+  }
+}
+</script>
 
 <style lang="sass" scoped>
 @import '/styles/reset.sass'
@@ -32,20 +43,20 @@ section
     border-radius: 10px
     margin: 0 auto
     margin-bottom: 40px
-    .input-username
+    .input-username 
       background-color: #3f3f3f
       border: none
       border-radius: 5px
       color: #f8f8f8
     .checkbox
       margin-right: 10px
-    button
+    .btn
       padding: 5px 10px
       border: none
       width: 120px
       height: 30px
       border-radius: 20px
       background-color: #053a77
-      a
-        color: #bdb8b8
+      color: #bdb8b8
+      cursor: pointer
 </style>
