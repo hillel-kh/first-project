@@ -1,36 +1,36 @@
 <template>
     <div class="wrapper" >
-      <h2 class="title">Текстовый редактор с автосохранением</h2>
+      <h2 class="title">Editor</h2>
       <div class="buttons">
-        <button @click="createTable()">TABLE</button>
-        <button @click="makeBold()"><b>BOLD</b></button>
-        <button @click="makeItalic()"><i>ITALIC</i></button>
-        <button @click="createImg()">IMAGE</button>
+        <button class="buttons__item" @click="makeBold()"><b>bold</b></button>
+        <button class="buttons__item" @click="makeItalic()"><i>italic</i></button>
+        <button class="buttons__item" @click="createTable()">table</button>
+        <button class="buttons__item" @click="createImg()">img</button>
       </div>
-      <p 
-        class="editor" 
-        contenteditable="true" 
-        v-model="text" 
-        :class="{italic: isItalic, bold: isBold}"
-        @keydown.ctrl.b="makeBold()"
-        @keydown.ctrl.i="makeItalic()">
-      </p>
+      <textarea 
+        class="editor"
+        contenteditable="true"
+        rows="10">
+      </textarea>
+      <button class="push-button">push</button>
     </div>
 </template>
 
 <script>
 export default {
-  data: () => ({
-    text: '',
-    isItalic: false,
-    isBold: false
-  }),
   methods: {
     makeItalic() {
-      this.isItalic ? this.isItalic = false : this.isItalic = true
+
     },
     makeBold() {
-      this.isBold ? this.isBold = false : this.isBold = true
+      const selection = window.getSelection();
+      console.log(selection.toString());
+      const replacement = document.createElement('b');
+      replacement.innerText = 'hi';
+      console.log(replacement);
+      const range = selection.getRangeAt(0);
+      console.log(range);
+      range.surroundContents(replacement);
     }
   }
 } 
@@ -42,28 +42,39 @@ export default {
 }
 .buttons {
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
+}
+.buttons__item{
+  padding: 5px 10px;
+  font-size: 20px;
+  color: white;
+  background-color: rgb(129, 129, 129);
+  border: 1px solid rgb(153, 153, 153);
+  border-bottom: none;
+  width: 25%;
+}
+.push-button {
+  padding: 5px 10px;
+  font-size: 20px;
+  color: white;
+  background-color: rgb(129, 129, 129);
+  border: 2px solid rgb(153, 153, 153);
+  width: 100%;
 }
 .editor{  
-  padding: 1em;
-  background: #E6E6E6;
-  border-radius: 3px;
+  padding: 10px;
+  background: white;
   height: 50%;
   font-family: Verdana, Arial, sans-serif;
   font-size: 24px;
-  border: 1px solid black;
+  border: 1px solid rgb(153, 153, 153);
+  width: 100%;
+  resize: none;
 }
 .title {
-  color:navy;
+  color:white;
   text-align: center;
   font-size: 1.5em;
   margin-top: 5px;
-}
-button{
-  /* height:80px;
-  width:150px; */
-  padding: 15px 10px;
 }
 .headline{
   font-size: 2em;
@@ -71,17 +82,11 @@ button{
 }
 .wrapper {
   width: 100%;
-  background: #FFF;
+  background: rgb(126, 125, 125);
   padding: 1em;
   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
   border-radius: 3px;
 }
-.bold {
-  font-weight: bold;
-}
-.italic {
-  font-style: italic;
-} 
 button:hover, button:focus {
   cursor: pointer;
   outline: none;
