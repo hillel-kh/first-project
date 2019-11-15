@@ -1,16 +1,16 @@
 <template>
-  <div class="layout">
-    <slot></slot>
-  </div>
+	<div class="layout">
+		<slot></slot>
+	</div>
 </template>
 
-<style scoped>
-.layout {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+<style lang="scss" scoped>
+	.layout {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
 </style>

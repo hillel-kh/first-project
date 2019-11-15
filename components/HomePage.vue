@@ -1,36 +1,37 @@
 <template>
-  <CenteredLayout>
-    <div class="container">
-      <h1>Welcome!</h1>
-      <h2>See our projects:</h2>
-      <a v-for="p in projects" :href="p.link">{{p.title}} &copy; {{p.author}}</a>
-    </div>
-  </CenteredLayout>
+	<CenteredLayout>
+		<div class="container">
+			<h1>Welcome!</h1>
+			<h2>See our projects:</h2>
+			<a v-for="p in projects" :href="p.link">{{p.title}} &copy; {{p.author}}</a>
+		</div>
+	</CenteredLayout>
 </template>
 
 <script>
-import CenteredLayout from './CenteredLayout.vue';
+	import CenteredLayout from './CenteredLayout.vue';
 
-export default {
-  data: () => ({
-    projects: [
-      { title: 'Twitter', author: 'Team', link: '/twitter' },
-      { title: 'Counter', author: 'Stanislav', link: '/counter' }
-    ]
-  }),
-  components: { CenteredLayout }
-}
+	export default {
+		data: () => ({
+			projects: [
+				{title: 'Twitter', author: 'Team', link: '/twitter'},
+				{title: 'Counter', author: 'Stanislav', link: '/counter'},
+				{title: 'Carusel', author: 'D', link: '/carusel'}
+			]
+		}),
+		components: {CenteredLayout}
+	}
 </script>
 
-<style scoped>
-.container {
-  overflow: auto;
-  text-align: center;
-  width: 100%;
-}
+<style lang="scss" scoped>
+	.container {
+		width: 100%;
+		overflow: auto;
+		text-align: center;
+	}
 
-a {
-  display: block;
-  padding: 4px;
-}
+	a {
+		padding: 4px;
+		display: block;
+	}
 </style>
