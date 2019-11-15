@@ -30,7 +30,7 @@
 </script>
 
 <style lang="scss" scoped>
-	@import "../../../scss/settings";
+	@import "../../../assets/scss/settings";
 
 	.templates-list {
 		@extend %listreset;

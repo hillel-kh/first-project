@@ -12,7 +12,7 @@
 </script>
 
 <style lang="scss" scoped>
-	@import "../../../scss/settings";
+	@import "../../../assets/scss/settings";
 
 	.message {
 		padding: 14px;

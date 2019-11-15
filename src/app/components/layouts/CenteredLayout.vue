@@ -5,7 +5,7 @@
 </template>
 
 <style lang="scss" scoped>
-	@import "../../../scss/settings";
+	@import "../../../assets/scss/settings";
 
 	.layout {
 		@include size(100%);

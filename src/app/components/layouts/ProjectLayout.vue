@@ -18,7 +18,7 @@
 </script>
 
 <style lang="scss" scoped>
-	@import "../../../scss/settings";
+	@import "../../../assets/scss/settings";
 
 	.page {
 		@include size(100%);

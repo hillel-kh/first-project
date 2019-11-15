@@ -39,7 +39,7 @@
 </script>
 
 <style lang="scss" scoped>
-	@import "../../scss/settings";
+	@import "../../assets/scss/settings";
 
 	.router {
 		@include size(100%);

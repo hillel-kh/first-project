@@ -33,7 +33,7 @@
 </script>
 
 <style lang="scss" scoped>
-	@import "../../../scss/settings";
+	@import "../../../assets/scss/settings";
 
 	.constructor-view {
 		padding: 10px;

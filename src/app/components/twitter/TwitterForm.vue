@@ -29,7 +29,7 @@
 </script>
 
 <style lang="scss" scoped>
-	@import "../../../scss/settings";
+	@import "../../../assets/scss/settings";
 
 	.message-input {
 		border: 0;
