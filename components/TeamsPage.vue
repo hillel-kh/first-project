@@ -43,35 +43,36 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .container {
   overflow: auto;
   width: 100%;
-}
 
-.teams {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+  .teams {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 
-.team {
-  text-align: center;
-  margin: 40px;
-}
+    .team {
+      text-align: center;
+      margin: 40px;
 
-img {
-  width: 70px;
-  border-radius: 50%;
-  line-height: 1;
-  vertical-align: middle;
-  margin: .5em;
-  transition: all .5s ease;
-  box-shadow: 0 0 0 0 rgb(173, 216, 230, .2), 0 0 0 0 pink;
-}
+      img {
+        width: 70px;
+        border-radius: 50%;
+        line-height: 1;
+        vertical-align: middle;
+        margin: .5em;
+        transition: all .5s ease;
+        box-shadow: 0 0 0 0 rgb(173, 216, 230, .2), 0 0 0 0 pink;
 
-img:hover {
-  transform: scale(1.4);
-  box-shadow: 0 0 0 10px rgb(173, 216, 230, .5), 0 0 0 3px orange;
+        &:hover {
+          transform: scale(1.4);
+          box-shadow: 0 0 0 10px rgb(173, 216, 230, .5), 0 0 0 3px orange;
+        }
+      }
+    }
+  }
+  
 }
 </style>

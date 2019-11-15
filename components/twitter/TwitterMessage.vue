@@ -11,20 +11,22 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .message {
   margin-top: 14px;
   padding: 14px;
   box-shadow: 1px 1px 3px #ddd;
   border-radius: 5px;
   background: #fff;
+  
+  .date {
+    color: #999;
+  }
+
+  .text {
+    margin: 8px 0 0;
+  }
 }
 
-.date {
-  color: #999;
-}
 
-.text {
-  margin: 8px 0 0;
-}
 </style>
