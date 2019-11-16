@@ -1,46 +1,46 @@
 <template>
-	<div>
-		<TwitterForm @createTweet="addTwitter"></TwitterForm>
+  <div>
+    <TwitterForm @createTweet="addTwitter"></TwitterForm>
 
-		<p v-if="!tweets.length">Be the first, send a message!</p>
+    <p v-if="!tweets.length">Be the first, send a message!</p>
 
-		<ol v-if="tweets.length"
-		    class="messages">
-			<TwitterMessage v-for="tweet in tweets"
-			                :tweet="tweet"></TwitterMessage>
-		</ol>
-	</div>
+    <ol v-if="tweets.length"
+        class="messages">
+      <TwitterMessage v-for="tweet in tweets"
+                      :tweet="tweet"></TwitterMessage>
+    </ol>
+  </div>
 </template>
 
 <script>
-	import TwitterMessage from './TwitterMessage.vue';
-	import TwitterForm from './TwitterForm.vue';
+  import TwitterMessage from './TwitterMessage.vue';
+  import TwitterForm from './TwitterForm.vue';
 
-	export default {
+  export default {
 
-		data: () => ({
-			tweets: []
-		}),
+    data: () => ({
+      tweets: []
+    }),
 
-		components: {
-			TwitterMessage,
-			TwitterForm
-		},
+    components: {
+      TwitterMessage,
+      TwitterForm
+    },
 
-		methods: {
-			addTwitter(tweet) {
-				this.tweets.push(tweet);
-			}
-		}
+    methods: {
+      addTwitter(tweet) {
+        this.tweets.push(tweet);
+      }
+    }
 
-	}
+  }
 </script>
 
 <style lang="scss" scoped>
-	@import "../../../assets/scss/settings";
+  @import "../../../assets/scss/settings";
 
-	.messages {
-		@extend %listreset;
-		margin-top: 30px;
-	}
+  .messages {
+    @extend %listreset;
+    margin-top: 30px;
+  }
 </style>

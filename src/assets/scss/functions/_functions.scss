@@ -5,10 +5,10 @@
 ///     color: white(0.9);
 ///   }
 @function black($opacity) {
-	@return rgba(black, $opacity);
+  @return rgba(black, $opacity);
 }
 
 @function white($opacity) {
-	@return rgba(white, $opacity);
+  @return rgba(white, $opacity);
 }
 

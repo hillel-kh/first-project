@@ -6,21 +6,21 @@
 //     or @include v-align(250px, bottom, before);
 
 @mixin v-align($va-height: 100%, $va-direction: middle, $va-pseudo: after) {
-	white-space: nowrap;
-	text-align: center;
-	&:#{$va-pseudo} {
-		content: '';
-		display: inline-block;
-		vertical-align: $va-direction;
-		width: 0;
-		min-height: $va-height;
-	}
-	> * {
-		white-space: normal;
-		display: inline-block;
-		vertical-align: $va-direction;
-		max-width: 99%;
-	}
+  white-space: nowrap;
+  text-align: center;
+  &:#{$va-pseudo} {
+    content: '';
+    display: inline-block;
+    vertical-align: $va-direction;
+    width: 0;
+    min-height: $va-height;
+  }
+  > * {
+    white-space: normal;
+    display: inline-block;
+    vertical-align: $va-direction;
+    max-width: 99%;
+  }
 }
 
 // vertical align a pair of child el inside parent
@@ -31,24 +31,24 @@
 //     or @include v-align-pair(image, text, middle, 200px);
 
 @mixin v-align-pair($child-name1, $child-name2, $valign: middle, $width1: auto, $width2: auto ) {
-	display: table;
-	.#{$child-name1} {
-		display: table-cell;
-		vertical-align: $valign;
-		width: $width1;
-	}
-	.#{$child-name2} {
-		display: table-cell;
-		vertical-align: $valign;
-		width: $width2;
-	}
+  display: table;
+  .#{$child-name1} {
+    display: table-cell;
+    vertical-align: $valign;
+    width: $width1;
+  }
+  .#{$child-name2} {
+    display: table-cell;
+    vertical-align: $valign;
+    width: $width2;
+  }
 }
 
 // vertical align el
 // usage: @include vertical-align-el;
 
 @mixin vertical-align-el {
-	top: 50%;
-	position: relative;
-	transform: translateY(-50%);
+  top: 50%;
+  position: relative;
+  transform: translateY(-50%);
 }

@@ -1,42 +1,42 @@
 // list reset
 %listreset {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 // clearfix
 %clearfix {
-	&:after {
-		content: '';
-		clear: both;
-		display: block;
-	}
+  &:after {
+    content: '';
+    clear: both;
+    display: block;
+  }
 }
 
 // transition
 %transition {
-	transition: $trans;
+  transition: $trans;
 }
 
 // justify nav
 %justify {
-	font-size: 1px;
-	line-height: 0;
-	text-align: justify;
-	> * {
-		text-align: left;
-		vertical-align: top;
-		display: inline-block;
-		font-size: $font-size-base;
-		line-height: $line-height-base;
-	}
-	&:after {
-		width: 100%;
-		content: '';
-		vertical-align: top;
-		display: inline-block;
-	}
+  font-size: 1px;
+  line-height: 0;
+  text-align: justify;
+  > * {
+    text-align: left;
+    vertical-align: top;
+    display: inline-block;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+  }
+  &:after {
+    width: 100%;
+    content: '';
+    vertical-align: top;
+    display: inline-block;
+  }
 }
 
 /// * Helper class to truncate and add ellipsis to a string too long for it to fit
@@ -45,7 +45,7 @@
 /// * 2. Add ellipsis at the end of the line.
 
 %ellipsis {
-	overflow: hidden;
-	white-space: nowrap; /* 1 */
-	text-overflow: ellipsis; /* 2 */
+  overflow: hidden;
+  white-space: nowrap; /* 1 */
+  text-overflow: ellipsis; /* 2 */
 }

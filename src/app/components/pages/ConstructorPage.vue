@@ -1,14 +1,14 @@
 <template>
-	<ProjectLayout title="Constructor">
-		<ConstructorExamples></ConstructorExamples>
-	</ProjectLayout>
+  <ProjectLayout title="Constructor">
+    <Constructor></Constructor>
+  </ProjectLayout>
 </template>
 
 <script>
-	import ProjectLayout from '../layouts/ProjectLayout.vue';
-	import ConstructorExamples from '../constructor/ConstructorExamples.vue';
+  import ProjectLayout from '../layouts/ProjectLayout.vue';
+  import Constructor from '../constructor/Constructor.vue';
 
-	export default {
-		components: {ProjectLayout, ConstructorExamples}
-	}
+  export default {
+    components: { ProjectLayout, Constructor }
+  }
 </script>

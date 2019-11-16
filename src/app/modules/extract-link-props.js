@@ -1,13 +1,13 @@
 const extractProps = link => {
-	const args = {};
+  const args = {};
 
-	link.slice(1).split('&')
-		.map(s => s.split('='))
-		.forEach(p => {
-			args[p[0]] = p[1]
-		})
+  link.slice(1).split('&')
+    .map(s => s.split('='))
+    .forEach(p => {
+      args[p[0]] = p[1]
+    })
 
-	return args;
+  return args;
 };
 
 module.exports = extractProps;
