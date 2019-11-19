@@ -19,7 +19,7 @@
     data() {
       return {
         test: {
-          html: `<div style="width: 350px;height: 200px;background: #17a2b8;"></div><div style="width: 250px;height: 200px;background: #dc3545;position: relative;top: -50px;left: 30px;"></div>`
+          html: `<div style="width: 310px;height: 200px;background: #17a2b8;"></div><div style="width: 250px;height: 200px;background: #dc3545;position: relative;top: -50px;left: 30px;"></div>`
         }
       }
     },
