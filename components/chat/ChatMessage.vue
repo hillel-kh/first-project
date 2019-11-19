@@ -1,25 +1,30 @@
 <template>
   <div class="message-wrapper">
-      <ul>
-        <li>
-          <div class="col1">
-            <img src="/img/chat-img/melania.png">
-          </div>
-          <div class="col2">
-            <h4>{{message.user_name}}</h4>
-            <p>{{message.message}}</p>
-            <p class="date">{{message.date.toLocaleString()}}</p>
-            <input type="button" class="btn" value="delete">
-          </div>
-        </li>
-      </ul>
-    </div>
+    <ul>
+      <li>
+        <!--<div class="col1">
+          <img src="/img/chat-img/melania.png" />
+        </div>-->
+        <div class="col2">
+          <h4>{{message.user_name}}</h4>
+          <p>{{message.message}}</p>
+          <p class="date">{{message.date.toLocaleString()}}</p>
+          <input type="button" class="btn del" value="delMessage" @click="delMessage"/>
+        </div>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
 export default {
-  props: ['message', 'date', 'user_name']
-}
+  props: ["message", "date", "user_name"],
+  methods: {
+    delMessage(evt) {
+    document.querySelector('.del').parentNode.remove();
+    }
+  }
+};
 </script>
 
 <style lang="sass" scoped>
