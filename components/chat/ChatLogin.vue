@@ -1,7 +1,7 @@
 <template>
   <div class="log">
-    <!--<ChatHeader></ChatHeader>-->
-    <ChatLoginComponent></ChatLoginComponent>
+    <ChatHeader ></ChatHeader>
+    <ChatLoginComponent @login="onLogin"></ChatLoginComponent>
     <ChatFooter></ChatFooter>
   </div>
 </template>
@@ -13,7 +13,14 @@ import ChatHeader from './ChatHeader.vue';
 import ChatLoginComponent from './ChatLoginComponent.vue';
 import ChatFooter from './ChatFooter.vue';
 export default {
-  components: {ChatHeader, ChatLoginComponent, ChatFooter}
+  data: () => ({ }),
+  components: {ChatHeader, ChatLoginComponent, ChatFooter},
+  methods: {
+    onLogin (data) {
+      alert(data.names);
+      document.location.href = '/chat/all_chats';
+    }
+  }
 }
 </script>
 
@@ -23,5 +30,5 @@ export default {
 @import '/styles/reset.sass'
 @import '/styles/chat-style.sass'
 .log
-  padding-top: 250px
+  //padding-top: 250px
 </style>

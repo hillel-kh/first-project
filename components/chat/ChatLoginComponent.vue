@@ -4,7 +4,7 @@
     <form @submit="submit">
       <label>
         Enter your username :
-        <input type="text" class="input-username" name="username" required pattern="[A-Za-z0-9]{3,15}"/>
+        <input v-model="userLogin" type="text" class="input-username" name="username" required pattern="[A-Za-z0-9]{3,15}"/>
       </label>
       <label>
         <input type="checkbox" class="checkbox" checked />remember me on this device
@@ -16,12 +16,12 @@
 
 <script>
 export default {
-  data: () => ({}),
+  data: () => ({ userLogin: '' }),
 
   methods: {
     submit(event) {
       event.preventDefault();
-      document.location.href = '/chat/all_chats';
+      this.$emit('login', { name: this.userLogin })
     },
   }
 }
