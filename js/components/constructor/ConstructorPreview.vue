@@ -3,9 +3,9 @@
 		<header>
 			<h2>ConstructorPreview</h2>
 			<nav>
-				<button>
-					<a href="/constructor">back to ConstructorExamples</a>
-				</button>
+				<form action="/constructor">
+					<button type="submit">back to ConstructorExamples</button>
+				</form>
 				<button>Edit</button>
 			</nav>
 		</header>
