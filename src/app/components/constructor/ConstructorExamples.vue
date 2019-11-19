@@ -5,7 +5,7 @@
         class="templates-list">
       <li v-for="template in templates">
         <div class="example">
-          <a href="/constructor/preview">preview</a>
+          <a :href=`/constructor/preview?id=${template.id}`>preview</a>
         </div>
       </li>
     </ul>
@@ -18,7 +18,16 @@
 <script>
   export default {
     data: () => ({
-      templates: [1, 2, 3]
+      templates: [
+        {
+          id: 1,
+          html: `<div style="width: 300px;height: 200px;background: #17a2b8;"></div><div style="width: 250px;height: 200px;background: #dc3545;position: relative;top: -50px;left: 30px;"></div>`
+        },
+        {
+          id: 2,
+          html: `<div style="width: 300px;height: 200px;background: gray;"></div><div style="width: 250px;height: 200px;background: yellow;position: relative;top: -50px;left: 30px;"></div>`
+        },
+      ]
     }),
 
     methods: {
