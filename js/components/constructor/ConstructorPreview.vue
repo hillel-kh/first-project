@@ -10,10 +10,7 @@
 			</nav>
 		</header>
 		<main>
-			<div
-				class="constructor-view"
-				ref="constructorView"
-			></div>
+			<div class="constructor-view" ref="constructorView"></div>
 		</main>
 	</div>
 </template>
