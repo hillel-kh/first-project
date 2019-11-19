@@ -1,9 +1,9 @@
 <template>
   <div>
     <h2>ConstructorExamples</h2>
-    <ul v-if="templates.length"
+    <ul v-if="x.length"
         class="templates-list">
-      <li v-for="template in templates">
+      <li v-for="template of x">
         <div class="example">
           <a :href=`/constructor/preview?id=${template.id}`>preview</a>
         </div>
@@ -16,25 +16,22 @@
 </template>
 
 <script>
+  import store from '../../store/index.js'
   export default {
-    data: () => ({
-      templates: [
-        {
-          id: 1,
-          html: `<div style="width: 300px;height: 200px;background: #17a2b8;"></div><div style="width: 250px;height: 200px;background: #dc3545;position: relative;top: -50px;left: 30px;"></div>`
-        },
-        {
-          id: 2,
-          html: `<div style="width: 300px;height: 200px;background: gray;"></div><div style="width: 250px;height: 200px;background: yellow;position: relative;top: -50px;left: 30px;"></div>`
-        },
-      ]
-    }),
-
-    methods: {
-      addTemplates(template) {
-        this.templates.push(template);
+      data() {
+          return {
+              x: []
+          }
+      },
+      methods: {
+        addTemplates(template) {
+          this.templates.push(template);
+        }
+      },
+      mounted() {
+        console.log(store.state.constructorTemplates);
+        this.x = store.state.constructorTemplates;
       }
-    }
   }
 </script>
 
