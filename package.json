@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html --open",
+    "start": "parcel *.html --open --port 4200 --no-cache",
+    "build": "parcel build *.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,10 +14,12 @@
   "dependencies": {
     "parcel": "^1.12.4",
     "vue": "^2.6.10",
-    "vue-hot-reload-api": "^2.3.4"
+    "vue-hot-reload-api": "^2.3.4",
+    "vuex": "^3.1.2"
   },
   "devDependencies": {
     "@vue/component-compiler-utils": "^3.0.0",
+    "sass": "^1.23.3",
     "vue-template-compiler": "^2.6.10"
   }
 }
