@@ -26,7 +26,7 @@ export default {
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias natus, et corrupti quam maiores perspiciatis temporibus odio reiciendis error alias debitis atque consequuntur iusto recusandae numquam, facilis blanditiis animi molestiae.",
         date: "06.09.2019, 21:20:21"
       },
-      {
+      /*{
         user_name: "Antonio",
         message:
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias natus, et corrupti quam maiores perspiciatis temporibus odio reiciendis error alias debitis atque consequuntur iusto recusandae numquam, facilis blanditiis animi molestiae.",
@@ -37,7 +37,7 @@ export default {
         message:
           "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias natus, et corrupti quam maiores perspiciatis temporibus odio reiciendis error alias debitis atque consequuntur iusto recusandae numquam, facilis blanditiis animi molestiae.",
         date: "08.09.2019, 21:20:21"
-      }
+      }*/
     ]
   }),
   components: { ChatHeader, ChatMessage, ChatFooter, ChatForm },

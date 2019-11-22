@@ -21,7 +21,7 @@ export default {
   methods: {
     submit(event) {
       event.preventDefault();
-      this.$emit('login', { name: this.userLogin })
+      document.location.href = '/chat/all_chats';
     },
   }
 }

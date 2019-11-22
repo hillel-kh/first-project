@@ -1,42 +1,50 @@
 <template>
   <div class="message-wrapper">
-    <form @submit="submit">
+    <form class="add-message">
       <textarea placeholder="Type a message..." v-model="message"></textarea>
-      <button class="clip">
+      <button class="clip" @click="addFileVisibility">
         <img src="/img/chat-img/clip.png" />
       </button>
-      <input class="btn" type="submit" value="send message" />
+      <input class="btn" type="submit" value="send message" @click="addMessage" />
     </form>
 
-    <!--<div class="message">
-        <form
-          class="media-form visually-hidden"
-          action="#"
-          method="post"
-          enctype="multipart/form-data"
-        >
-          <p>select media to upload:</p>
-          <input type="file" name="media" />
-          <input type="submit" value="Загрузить" />
-        </form>
-      </div>
-    </div>-->
+    <form class="add-file" action="#" method="post" enctype="multipart/form-data">
+      <label>
+        select media to upload:
+        <input type="file" name="media" />
+      </label>
+      <input type="submit" value="Add" @click="addFile"/>
+    </form>
   </div>
 </template>
 
 <script>
 export default {
-  data: () => ({ message: '' }),
+  data: () => ({ message: "" }),
 
   methods: {
-    submit(event) {
+    addMessage(event) {
       event.preventDefault();
-      const newMessage = { message: this.message, date: new Date(), user_name: 'Melania' };
-      this.$emit('createMessage', newMessage);
-      this.message = '';
+      const newMessage = {
+        message: this.message,
+        date: new Date(),
+        user_name: "Melania"
+      };
+      this.$emit("createMessage", newMessage);
+      this.message = "";
+    },
+
+    addFileVisibility(event) {
+      event.preventDefault();
+      document.querySelector('.add-file').style.display = "block";
+    },
+
+    addFile(event) {
+      event.preventDefault();
+      document.querySelector('.add-file').style.display = "none";
     }
   }
-}
+};
 </script>
 
 <style lang="sass" scoped>
@@ -45,7 +53,8 @@ export default {
   border-radius: 10px
   margin-bottom: 40px
   padding: 20px
-  form
+  position: relative
+  .add-message
     display: flex
     align-items: center
     textarea
@@ -74,4 +83,15 @@ export default {
     .btn:hover
       background-color: #0071f0b3
       cursor: pointer
+  .add-file
+    position: absolute
+    left: 20%
+    top: 0
+    border: 1px solid #fff
+    border-radius: 20px
+    padding: 50px
+    display: none
+    background: rgba(255, 255, 255, 0.5)
+    label input
+      margin: 0 10px
 </style>

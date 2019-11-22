@@ -1,7 +1,7 @@
 <template>
   <div class="log">
     <ChatHeader ></ChatHeader>
-    <ChatLoginComponent @login="onLogin"></ChatLoginComponent>
+    <ChatLoginComponent></ChatLoginComponent>
     <ChatFooter></ChatFooter>
   </div>
 </template>
@@ -13,14 +13,7 @@ import ChatHeader from './ChatHeader.vue';
 import ChatLoginComponent from './ChatLoginComponent.vue';
 import ChatFooter from './ChatFooter.vue';
 export default {
-  data: () => ({ }),
   components: {ChatHeader, ChatLoginComponent, ChatFooter},
-  methods: {
-    onLogin (data) {
-      alert(data.names);
-      document.location.href = '/chat/all_chats';
-    }
-  }
 }
 </script>
 
