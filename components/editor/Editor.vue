@@ -13,7 +13,6 @@
         contenteditable="true"
         autofocus>
       </div>
-      <img src="http://www.imgworlds.com/wp-content/uploads/2015/12/18-CONTACTUS-HEADER.jpg" alt="" class="adaptive">
       <button class="push-button">push</button>
     </div>
 </template>
@@ -108,7 +107,7 @@ button:hover, button:focus {
   cursor: pointer;
   outline: none;
 }
-.adaptive {
+.editor >>> .adaptive {
   height: auto;
   width: 100%;
   max-width: 720px;
