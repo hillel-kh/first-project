@@ -2,16 +2,18 @@
     <div class="wrapper" >
       <h2 class="title">Editor</h2>
       <div class="buttons">
-        <button class="buttons__item" @click="makeBold()"><b>bold</b></button>
-        <button class="buttons__item" @click="makeItalic()"><i>italic</i></button>
+        <button class="buttons__item" @click="insertTag('b')"><b>bold</b></button>
+        <button class="buttons__item" @click="insertTag('i')"><i>italic</i></button>
         <button class="buttons__item" @click="createTable()">table</button>
-        <button class="buttons__item" @click="createImg()">img</button>
+        <button class="buttons__item" @click="insertTag('img')">img</button>
+        <button class="buttons__item" @click="del()">delete</button>
       </div>
-      <textarea 
+      <div 
         class="editor"
         contenteditable="true"
-        rows="10">
-      </textarea>
+        autofocus>
+      </div>
+      <img src="http://www.imgworlds.com/wp-content/uploads/2015/12/18-CONTACTUS-HEADER.jpg" alt="" class="adaptive">
       <button class="push-button">push</button>
     </div>
 </template>
@@ -19,18 +21,33 @@
 <script>
 export default {
   methods: {
-    makeItalic() {
-
+    insertTag(tagName) {
+      // const selection = window.getSelection()
+      // const range = selection.getRangeAt(0)
+      // const tag = document.createElement(tagName)
+      // if (tagName === 'img') {
+      //   const link = prompt('Link to the img')
+      //   if(!link) return
+      //   tag.setAttribute('src', link)
+      // }
+      // range.surroundContents(tag)
+      // const deleteRange = range.selectNode(tag)
+      const selection = window.getSelection() 
+      const range = selection.getRangeAt(0) 
+      const tag = document.createElement(tagName);
+      if (tagName === 'img') {
+        const link = prompt('Link to the img')
+        if(!link) return
+        tag.setAttribute('src', link)
+        tag.className = 'adaptive'
+      }
+      tag.appendChild(range.extractContents());
+      range.insertNode(tag);
     },
-    makeBold() {
-      const selection = window.getSelection();
-      console.log(selection.toString());
-      const replacement = document.createElement('b');
-      replacement.innerText = 'hi';
-      console.log(replacement);
-      const range = selection.getRangeAt(0);
-      console.log(range);
-      range.surroundContents(replacement);
+    del() {
+      const selection = window.getSelection()
+      const range = selection.getRangeAt(0)
+      range.deleteContents()
     }
   }
 } 
@@ -63,7 +80,7 @@ export default {
 .editor{  
   padding: 10px;
   background: white;
-  height: 50%;
+  min-height: 300px;
   font-family: Verdana, Arial, sans-serif;
   font-size: 24px;
   border: 1px solid rgb(153, 153, 153);
@@ -90,5 +107,10 @@ export default {
 button:hover, button:focus {
   cursor: pointer;
   outline: none;
+}
+.adaptive {
+  height: auto;
+  width: 100%;
+  max-width: 720px;
 }
 </style>
