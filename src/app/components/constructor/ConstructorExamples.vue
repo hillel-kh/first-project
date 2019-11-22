@@ -17,21 +17,22 @@
 
 <script>
   import store from '../../store/index.js'
+
   export default {
-      data() {
-          return {
-              x: []
-          }
-      },
-      methods: {
-        addTemplates(template) {
-          this.templates.push(template);
-        }
-      },
-      mounted() {
-        console.log(store.state.constructorTemplates);
-        this.x = store.state.constructorTemplates;
+    data() {
+      return {
+        x: []
       }
+    },
+    methods: {
+      addTemplates(template) {
+        this.templates.push(template);
+      }
+    },
+    mounted() {
+      console.log(store.state.constructorTemplates);
+      this.x = store.state.constructorTemplates;
+    }
   }
 </script>
 

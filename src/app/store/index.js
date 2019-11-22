@@ -20,9 +20,7 @@ const store = new Vuex.Store({
       },
     ],
   },
-  mutations: {
-
-  },
+  mutations: {},
   actions: {
     getItem(state) {
       return state.constructorTemplates
