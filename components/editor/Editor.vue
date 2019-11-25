@@ -11,7 +11,7 @@
       <div 
         class="editor"
         contenteditable="true"
-        autofocus>
+        autofocus="autofocus">
       </div>
       <button class="push-button">push</button>
     </div>
@@ -21,33 +21,23 @@
 export default {
   methods: {
     insertTag(tagName) {
-      // const selection = window.getSelection()
-      // const range = selection.getRangeAt(0)
-      // const tag = document.createElement(tagName)
-      // if (tagName === 'img') {
-      //   const link = prompt('Link to the img')
-      //   if(!link) return
-      //   tag.setAttribute('src', link)
-      // }
-      // range.surroundContents(tag)
-      // const deleteRange = range.selectNode(tag)
-      const selection = window.getSelection() 
-      const range = selection.getRangeAt(0) 
+      document.querySelector('.editor').focus(); // На случай если ничего не выделено или выделен элемент вне .editor (на самом деле я без понятия, почему это работает)
+      const range = window.getSelection().getRangeAt(0);
       const tag = document.createElement(tagName);
       if (tagName === 'img') {
-        const link = prompt('Link to the img')
-        if(!link) return
-        tag.setAttribute('src', link)
-        tag.className = 'adaptive'
+        const link = prompt('Link to an img');
+        if(!link) return;
+        tag.setAttribute('src', link);
+        tag.className = 'adaptive';
       }
-      tag.appendChild(range.extractContents());
+      tag.appendChild(range.extractContents()); // Добавляет в tag выделенный текст
       range.insertNode(tag);
     },
     del() {
-      const selection = window.getSelection()
-      const range = selection.getRangeAt(0)
-      range.deleteContents()
-    }
+      const selection = window.getSelection();
+      const range = selection.getRangeAt(0);
+      range.deleteContents();
+    },
   }
 } 
 </script>
