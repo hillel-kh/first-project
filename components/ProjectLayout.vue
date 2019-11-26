@@ -16,27 +16,29 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .page {
   height: 100%;
   width: 100%;
   overflow: auto;
 }
 
-h1 {
-  margin: 0 0 10px;
-}
-
-header {
-  margin-bottom: 30px;
-}
-
-a {
-  font-size: 14px;
-}
-
 main {
   margin: 60px auto;
   width: 400px;
 }
+
+header {
+  margin-bottom: 30px;
+      
+  h1 {
+    margin: 0 0 10px;
+  }
+  
+  a {
+    font-size: 14px;
+  }
+}
+
+
 </style>

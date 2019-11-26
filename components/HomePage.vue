@@ -22,7 +22,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .container {
   overflow: auto;
   text-align: center;
@@ -33,4 +33,5 @@ a {
   display: block;
   padding: 4px;
 }
+
 </style>

@@ -1,0 +1,25 @@
+$main-font: 16px/1 BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+@mixin page-size {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+html {
+  @include page-size;
+  background: #fff;
+  overflow: hidden;
+
+  body {
+    @include page-size;
+    color: #444;
+    font: $main-font;
+    overflow: auto;
+
+    a {
+      color: #666;
+    }
+  }
+}

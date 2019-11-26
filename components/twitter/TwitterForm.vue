@@ -26,7 +26,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .message-input {
   border-radius: 4px;
   border: 0;
