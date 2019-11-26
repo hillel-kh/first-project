@@ -27,10 +27,11 @@ export default {
   overflow: auto;
   text-align: center;
   width: 100%;
-
-  a {
-    display: block;
-    padding: 4px;
-  }
 }
+
+a {
+  display: block;
+  padding: 4px;
+}
+
 </style>

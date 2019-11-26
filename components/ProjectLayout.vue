@@ -21,22 +21,24 @@ export default {
   height: 100%;
   width: 100%;
   overflow: auto;
+}
 
-  main {
-    margin: 60px auto;
-    width: 400px;
+main {
+  margin: 60px auto;
+  width: 400px;
+}
 
-    header {
-      margin-bottom: 30px;
+header {
+  margin-bottom: 30px;
       
-      h1 {
-        margin: 0 0 10px;
-      }
-
-      a {
-        font-size: 14px;
-      }
-    }
+  h1 {
+    margin: 0 0 10px;
+  }
+  
+  a {
+    font-size: 14px;
   }
 }
+
+
 </style>
