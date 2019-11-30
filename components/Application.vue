@@ -10,6 +10,7 @@ import Router from './Router.vue';
 import HomePage from './HomePage.vue';
 import TwitterPage from './TwitterPage.vue';
 import CounterPage from './CounterPage.vue';
+import GalleryPage from './GalleryPage.vue';
 import TeamsPage from './TeamsPage.vue';
 import NotFoundPage from './NotFoundPage.vue';
 import EditorPage from './EditorPage.vue';
@@ -19,6 +20,7 @@ export default {
       '/': HomePage,
       '/twitter': TwitterPage,
       '/counter': CounterPage,
+      '/gallery': GalleryPage,
       '/teams': TeamsPage,
       '/editor': EditorPage
     }
