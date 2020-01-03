@@ -18,7 +18,8 @@ export default {
       { title: 'Counter', author: 'Stanislav', link: '/counter' },
       { title: 'Editor', author: 'team X', link: '/editor' },
       { title: 'Gallery', author: '', link: '/gallery' },
-      { title: 'Converter', author: 'Diana', link: '/converter' }
+      { title: 'Converter', author: 'Diana', link: '/converter' },
+      { title: 'ToDo', author: 'Diana', link: '/todo' }
     ]
   }),
   components: { CenteredLayout }

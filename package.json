@@ -14,6 +14,8 @@
   "dependencies": {
     "parcel": "^1.12.4",
     "rimraf": "^3.0.0",
+    "t": "^0.5.1",
+    "todo": "^1.1.0",
     "vue": "^2.6.10",
     "vue-hot-reload-api": "^2.3.4"
   },

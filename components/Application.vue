@@ -15,6 +15,7 @@ import TeamsPage from './TeamsPage.vue';
 import NotFoundPage from './NotFoundPage.vue';
 import EditorPage from './EditorPage.vue';
 import ConverterPage from './Converter.vue';
+import ToDoPage from './ToDoPage.vue';
 export default {
   data: () => ({
     routes: {
@@ -24,6 +25,7 @@ export default {
       '/gallery': GalleryPage,
       '/teams': TeamsPage,
       '/editor': EditorPage,
+      '/todo': ToDoPage,
       '/converter': ConverterPage
     }
   }),
