@@ -13,7 +13,9 @@ import CounterPage from './CounterPage.vue';
 import GalleryPage from './GalleryPage.vue';
 import TeamsPage from './TeamsPage.vue';
 import NotFoundPage from './NotFoundPage.vue';
-
+import EditorPage from './EditorPage.vue';
+import ConverterPage from './Converter.vue';
+import ToDoPage from './ToDoPage.vue';
 export default {
   data: () => ({
     routes: {
@@ -21,7 +23,10 @@ export default {
       '/twitter': TwitterPage,
       '/counter': CounterPage,
       '/gallery': GalleryPage,
-      '/teams': TeamsPage
+      '/teams': TeamsPage,
+      '/editor': EditorPage,
+      '/todo': ToDoPage,
+      '/converter': ConverterPage
     }
   }),
 
