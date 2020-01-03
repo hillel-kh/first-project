@@ -14,6 +14,7 @@ import GalleryPage from './GalleryPage.vue';
 import TeamsPage from './TeamsPage.vue';
 import NotFoundPage from './NotFoundPage.vue';
 import EditorPage from './EditorPage.vue';
+import ConverterPage from './Converter.vue';
 export default {
   data: () => ({
     routes: {
@@ -22,7 +23,8 @@ export default {
       '/counter': CounterPage,
       '/gallery': GalleryPage,
       '/teams': TeamsPage,
-      '/editor': EditorPage
+      '/editor': EditorPage,
+      '/converter': ConverterPage
     }
   }),
 

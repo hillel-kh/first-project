@@ -1,5 +1,6 @@
 <template>
   <CenteredLayout>
+        <a href="/">Return back</a>
     <img v-if="id && images[id]" :src="images[id]" />
     <p v-else>Oops, no image here</p>
   </CenteredLayout>
