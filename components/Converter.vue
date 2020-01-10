@@ -2,20 +2,20 @@
   <ProjectLayout title="Converter" bgcolor="yellow">
 
     <div id = "convert">
-      <h1>Currency Converter</h1>  
+      <h1>Currency Converter</h1>
       <span>Enter Amount:</span><input type = "number" v-model.number = "amount" placeholder = "Enter Amount" /><br/>
       <span>Convert From:</span>
-     
+
       <select v-model = "convertfrom" style = "width:300px;font-size:25px;">
         <option v-for = "(a, index) in currencyfrom"  v-bind:value = "a.name">{{a.desc}}</option>
       </select>
-      
+
       <span>Convert To:</span>
-      
+
       <select v-model = "convertto" style = "width:300px;font-size:25px;">
         <option v-for = "(a, index) in currencyfrom" v-bind:value = "a.name">{{a.desc}}</option>
       </select><br/><br/>
-      
+
       <span> {{amount}} {{convertfrom}} equals {{finalamount}} {{convertto}}</span>
     </div>
   </ProjectLayout>
@@ -26,8 +26,7 @@ import ProjectLayout from './ProjectLayout.vue';
 
  export default {
   components: { ProjectLayout },
-  el: '#convert',
-  data: {
+  data: () => ({
     name:'',
     currencyfrom : [
       { name:"USD", desc:"US Dollar" },
@@ -37,7 +36,7 @@ import ProjectLayout from './ProjectLayout.vue';
  convertfrom: "UAH",
  convertto:"USD",
  amount :" "
- },
+ }),
  computed :{
  finalamount:function() {
  var to = this.convertto;
@@ -78,7 +77,7 @@ import ProjectLayout from './ProjectLayout.vue';
  }
  break;
  }
- return final;
+ return Math.round(final * 1000) / 1000;
 }
   }
     };
