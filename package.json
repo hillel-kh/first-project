@@ -12,7 +12,7 @@
   "author": "Stanislav Termosa <termosa.stanislav@gmail.com> (https://me.st/)",
   "license": "MIT",
   "dependencies": {
-    "parcel": "^1.12.4",
+    "parcel": "^2.8.2",
     "rimraf": "^3.0.0",
     "vue": "^2.6.10",
     "vue-hot-reload-api": "^2.3.4"
